@@ -1,3 +1,4 @@
+
 $.get( "http://localhost/laravel_event/public/event/all")
     .done(function( data ) {
         //alert( "Data Loaded: " + data );
