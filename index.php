@@ -29,7 +29,7 @@
                         <input type="hidden" name="hidden_id" value="{{this.event_id}}"/>
                         <input type="submit" name="view_more" onclick="view_more()" value="+"/>
                     </form>
-                    <input type="button" name="buy_ticket" onclick="buy_tickets()" value="Köp biljett"/>
+                    <a href="{{this.event_tickets}}"><input type="button" name="buy_ticket" onclick="buy_tickets()" value="Köp biljett"/></a>
                 </div>
                 {{/each}}
         </script>
