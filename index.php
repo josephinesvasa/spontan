@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/circle-progress.js"></script>
         <script src="js/handlebars-v3.0.3.js"></script>
         <script src="js/index.js"></script>
         <link href="css/reset.css"/>
@@ -12,7 +13,20 @@
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
-    <div id="blaj">
+<script>
+        $('#circle').circleProgress({
+            value: 0.75,
+            size: 80,
+            startAngle: 4.7,
+            fill: {
+                gradient: ["yellow", "orange", "red"]
+            }
+        });
+</script>
+
+<div id="circle"></div>
+
+    <div id="content">
 
     </div>
         <!--Handlebar templates start-->
@@ -20,16 +34,20 @@
                 {{#each event}}
                 <div class="event">
                     <h1>{{this.event_title}}</h1>
-                    <p>Datum:{{this.event_date}}</p>
-                    <p>Tid:{{this.event_time}}</p>
-                    <p>Plats:{{this.venue.0.venue_name}}</p>
-                    <p>Åldersgräns:{{this.event_age_restriction}}</p>
-                    <p>Popularity:{{this.event_popularity}}</p>
+                    <p>Datum: {{this.event_date}}</p>
+                    <p>Tid: {{this.event_time}}</p>
+                    <p>Plats: {{this.venue.0.venue_name}}</p>
+                    <p>Åldersgräns: {{this.event_age_restriction}}</p>
+                    <p>Popularity: {{this.event_popularity}}</p>
+
                     <form>
                         <input type="hidden" name="hidden_id" value="{{this.event_id}}"/>
                         <input type="submit" name="view_more" onclick="view_more()" value="+"/>
                     </form>
                     <a href="{{this.event_tickets}}"><input type="button" name="buy_ticket" onclick="buy_tickets()" value="Köp biljett"/></a>
+                </div>
+                <div class="artists">
+                    <p>wioooho: {{this.artist.0.artist_name}}</p>
                 </div>
                 {{/each}}
         </script>
