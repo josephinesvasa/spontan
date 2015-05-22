@@ -14,26 +14,10 @@
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
-<<<<<<< HEAD
-
-
-    <div id="blaj">
-=======
-<script>
-        $('#circle').circleProgress({
-            value: 0.75,
-            size: 80,
-            startAngle: 4.7,
-            fill: {
-                gradient: ["yellow", "orange", "red"]
-            }
-        });
-</script>
 
 <div id="circle"></div>
 
     <div id="content">
->>>>>>> origin/master
 
     </div>
 
