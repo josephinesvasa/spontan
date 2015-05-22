@@ -6,6 +6,7 @@
         <script src="js/circle-progress.js"></script>
         <script src="js/handlebars-v3.0.3.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/circle-progress.js"></script>
         <link href="css/reset.css"/>
 
         <title>Spontan</title>
@@ -13,6 +14,11 @@
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
+<<<<<<< HEAD
+
+
+    <div id="blaj">
+=======
 <script>
         $('#circle').circleProgress({
             value: 0.75,
@@ -27,8 +33,10 @@
 <div id="circle"></div>
 
     <div id="content">
+>>>>>>> origin/master
 
     </div>
+
         <!--Handlebar templates start-->
         <script id="event-template" type="text/x-handlebars-template">
                 {{#each event}}
@@ -42,12 +50,26 @@
 
                     <form>
                         <input type="hidden" name="hidden_id" value="{{this.event_id}}"/>
-                        <input type="submit" name="view_more" onclick="view_more()" value="+"/>
+                        <input type="submit" name="view_more" value="+" onclick="view_more()"/>
                     </form>
+                    <script>
+                        $('.circle').circleProgress({
+
+                            value:0.56,
+                            size: 80,
+                            startAngle: 4.7,
+                            fill: {
+                                gradient: ["red", "orange"]
+                            }
+                        });
+                        <{{!}}/script>
+                        <div class="circle"></div>
                     <a href="{{this.event_tickets}}"><input type="button" name="buy_ticket" onclick="buy_tickets()" value="Köp biljett"/></a>
-                </div>
-                <div class="artists">
-                    <p>wioooho: {{this.artist.0.artist_name}}</p>
+                    <div class="artist_div">
+                    {{#each artists}}
+                    <p>Artist:{{this.artist_name}}</p>
+                    {{/each}}
+                    </div>
                 </div>
                 {{/each}}
         </script>
