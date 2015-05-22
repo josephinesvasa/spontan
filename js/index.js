@@ -6,7 +6,7 @@ $.get( "http://localhost/laravel_event/public/event/all")
         var template = Handlebars.compile(source);
         var html=template(data);
 
-        $('#blaj').html(html);
+        $('#content').html(html);
         //console.log(html);
     });
 
