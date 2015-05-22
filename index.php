@@ -30,7 +30,8 @@
                     <p>Tid: {{this.event_time}}</p>
                     <p>Plats: {{this.venue.0.venue_name}}</p>
                     <p>Åldersgräns: {{this.event_age_restriction}}</p>
-                    <p>Popularity: {{this.event_popularity}}</p>
+
+                    <p class="val">{{this.event_popularity}}</p>
 
                     <form>
                         <input type="hidden" name="hidden_id" value="{{this.event_id}}"/>
@@ -38,8 +39,7 @@
                     </form>
                     <script>
                         $('.circle').circleProgress({
-
-                            value:0.56,
+                            value: document.getElementsByClassName('val')[0].innerHTML,
                             size: 80,
                             startAngle: 4.7,
                             fill: {
