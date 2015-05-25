@@ -6,6 +6,7 @@
     position: fixed;
     z-index: 100;
     border-bottom: 2px solid orangered;
+
 }
 #body{
     background-image: url("../img/background_img.png");
@@ -86,8 +87,8 @@ background: #FF4500;
     background-image: -ms-linear-gradient(top, #FF4500, #f04000);
     background-image: -o-linear-gradient(top, #FF4500, #f04000);
     background-image: linear-gradient(to bottom, #FF4500, #f04000);
-    -webkit-border-radius: 2;
-    -moz-border-radius: 2;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
     border-radius: 2px;
     -webkit-box-shadow: 0px 0px 0px;
     -moz-box-shadow: 0px 0px 0px;
@@ -112,11 +113,13 @@ background: #FF4500;
     margin-top: 10px;
     padding-top: 5px;
     border-top: 1px solid orangered;
+
 }
 .artists_info{
     display: inline-block;
     text-align: center;
     margin: 0 2px;
+
 }
 .image{
     height: 120px;
@@ -125,4 +128,26 @@ background: #FF4500;
 .val{
     display: none;
 }
+#spon{
+    font-size: 40px;
+    display: inline;
+    float: left;
+    color: white;
+    margin-right: 250px;
+    margin-top: 20px;
+    margin-left: 30px;
 
+}
+.spontan{
+    color: white;
+    font-size: 20px;
+    margin: 40px;
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+
+
+}
+.spontan:hover{
+    color: orangered;
+}
