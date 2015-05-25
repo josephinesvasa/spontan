@@ -19,7 +19,20 @@
 
 
 <div id="header">
-
+<ul>
+    <li id="spon">
+        Spontan
+    </li>
+    <li class="spontan">
+        Stockholm
+    </li>
+    <li class="spontan">
+        Göteborg
+    </li>
+    <li class="spontan">
+        Malmö
+    </li>
+</ul>
 </div>
 <div id="wrapper">
     <div id="content">
