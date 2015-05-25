@@ -6,7 +6,8 @@
         <script src="js/circle-progress.js"></script>
         <script src="js/handlebars-v3.0.3.js"></script>
         <script src="js/index.js"></script>
-        <script src="js/circle-progress.js"></script>
+        <script src="js/artist.js"></script>
+        <script src="js/circle.js"></script>
         <link href="css/reset.css"/>
 
         <title>Spontan</title>
@@ -15,13 +16,13 @@
     </head>
     <body>
 
-<div id="circle"></div>
+
 
     <div id="content">
 
     </div>
-
         <!--Handlebar templates start-->
+
         <script id="event-template" type="text/x-handlebars-template">
                 {{#each event}}
                 <div class="event">
@@ -30,33 +31,27 @@
                     <p>Tid: {{this.event_time}}</p>
                     <p>Plats: {{this.venue.0.venue_name}}</p>
                     <p>Åldersgräns: {{this.event_age_restriction}}</p>
-                    <p>Popularity: {{this.event_popularity}}</p>
 
-                    <form>
-                        <input type="hidden" name="hidden_id" value="{{this.event_id}}"/>
-                        <input type="submit" name="view_more" value="+" onclick="view_more()"/>
-                    </form>
-                    <script>
-                        $('.circle').circleProgress({
+                    <p class="val">{{this.event_popularity}}</p>
 
-                            value:0.56,
-                            size: 80,
-                            startAngle: 4.7,
-                            fill: {
-                                gradient: ["red", "orange"]
-                            }
-                        });
-                        <{{!}}/script>
-                        <div class="circle"></div>
+                <div class='circle'></div>
+
+                        <input type="button" id="{{this.event_id}}" onclick="show_more({{this.event_id}},this.id )" class="view_more" name="view_more" value="+"/>
+
                     <a href="{{this.event_tickets}}"><input type="button" name="buy_ticket" onclick="buy_tickets()" value="Köp biljett"/></a>
-                    <div class="artist_div">
-                    {{#each artists}}
-                    <p>Artist:{{this.artist_name}}</p>
-                    {{/each}}
-                    </div>
+
                 </div>
+                <div class="art"></div>
                 {{/each}}
         </script>
+        <script  id="artist-template" type="text/x-handlebars-template">
+            <div class="artist_div">
+            {{#each artists}}
+            <p>Artist:{{this.artist_name}}</p>
+            {{/each}}
+            </div>
+        </script>
+
         <!--Handlebar templates end-->
     </body>
 </html>
