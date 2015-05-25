@@ -60,7 +60,8 @@
                     <a href="{{this.event_tickets}}" target="_blank"><input type="button" class="buy_ticket" name="buy_ticket" onclick="buy_tickets()" value="Köp biljett"/></a>
                     </div>
                 </div>
-                    <div class="art"></div>
+                    <div class="art">
+                    </div>
                 </div>
                 {{/each}}
         </script>
