@@ -6,7 +6,8 @@
         <script src="js/circle-progress.js"></script>
         <script src="js/handlebars-v3.0.3.js"></script>
         <script src="js/index.js"></script>
-        <script src="js/circle-progress.js"></script>
+        <script src="js/artist.js"></script>
+        <script src="js/circle.js"></script>
         <link href="css/reset.css"/>
 
         <title>Spontan</title>
@@ -20,11 +21,6 @@
     <div id="content">
 
     </div>
-    <div id="art">
-
-    </div>
-
-
         <!--Handlebar templates start-->
 
         <script id="event-template" type="text/x-handlebars-template">
@@ -37,42 +33,23 @@
                     <p>Åldersgräns: {{this.event_age_restriction}}</p>
 
                     <p class="val">{{this.event_popularity}}</p>
-                    <form>
-                        <input type="hidden" name="hidden_id" value="{{this.event_id}}"/>
-                        <input type="submit" id="{{this.event_id}}" name="view_more" value="+" onclick="view_more()"/>
-                    </form>
-                    <script>
 
+                <div class='circle'></div>
 
-                        var elements = document.getElementsByClassName('val');
-                       for (var i = 0; i < elements.length; i++) {
-                           var x=elements[i];
+                        <input type="button" id="{{this.event_id}}" onclick="show_more({{this.event_id}},this.id )" class="view_more" name="view_more" value="+"/>
 
-
-                       }
-
-                          console.log(x);
-
-
-                        $('.circle').circleProgress({
-                            value:  document.getElementsByClassName('val')[0].innerHTML,
-                            size: 80,
-                            startAngle: 4.7,
-                            fill: {
-                                gradient: ["red", "orange"]
-                            }
-                        });
-                     <{{!}}/script>
-
-                        <div class="circle"></div>
                     <a href="{{this.event_tickets}}"><input type="button" name="buy_ticket" onclick="buy_tickets()" value="Köp biljett"/></a>
-                    <div class="artist_div">
-                    {{#each artists}}
-                    <p>Artist:{{this.artist_name}}</p>
-                    {{/each}}
-                    </div>
+
                 </div>
+                <div class="art"></div>
                 {{/each}}
+        </script>
+        <script  id="artist-template" type="text/x-handlebars-template">
+            <div class="artist_div">
+            {{#each artists}}
+            <p>Artist:{{this.artist_name}}</p>
+            {{/each}}
+            </div>
         </script>
 
         <!--Handlebar templates end-->
