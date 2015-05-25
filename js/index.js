@@ -5,6 +5,7 @@ function addID() {
         i++;
         var newID = 'menu' + i;
         $(this).attr('id', newID);
+        $(this).css('display', 'none');
 
 
     });
@@ -17,7 +18,6 @@ function addButtonID() {
         i++;
         var newID = i.toString();
         $(this).attr('id', newID);
-
 
     });
 
