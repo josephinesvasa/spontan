@@ -21,7 +21,23 @@ function show_more(id, buttonid) {
             $(artist_div).html(html);
             $(button).val("-");
 
+                $.get( "http://localhost/laravel_event/public/event/venue/"+id)
+
+                    .done(function( data ) {
+
+                        var source   = $("#venue-template").html();
+                        var template = Handlebars.compile(source);
+                        var html2=template(data);
+
+                        var artist_div=('#menu'+buttonid).toString();
+                        $(artist_div).html(html+html2);
+                        $(button).val("-");
+
+                    });
         });
+
+
     }
 };
+
 

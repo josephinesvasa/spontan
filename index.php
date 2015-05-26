@@ -76,6 +76,17 @@
             {{/each}}
             </div>
         </script>
+    <script  id="venue-template" type="text/x-handlebars-template">
+        <h1>Venue</h1>
+        <div class="venue_div">
+            {{#each venue}}
+            <div class="venue_info">
+                <img class="image" src="{{this.venue_map_image}}">
+                <p>{{this.venue_name}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </script>
 
         <!--Handlebar templates end-->
 </div>
