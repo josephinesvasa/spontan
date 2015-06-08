@@ -1,4 +1,3 @@
-
 function addID() {
     var i = 0;
     $('.art').each(function () {
@@ -23,12 +22,12 @@ function addButtonID() {
 
 }
 
-$.get( "http://localhost/laravel_event/public/event/all")
+$.get("http://localhost/laravel_event/public/event/all")
 
-    .done(function( data ) {
-        var source   = $("#event-template").html();
+    .done(function (data) {
+        var source = $("#event-template").html();
         var template = Handlebars.compile(source);
-        var html=template(data);
+        var html = template(data);
 
         $('#content').html(html);
         show_circle();

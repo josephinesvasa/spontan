@@ -16,6 +16,7 @@
 
 }
 h1{
+    width: auto;
     font-size: 18pt;
     font-weight: bolder;
     color: #000000;
@@ -108,14 +109,16 @@ background: #FF4500;
     background: #FF4500;
     text-decoration: none;
 }
-
+.art{
+    margin-top: 10px;
+    border-top: 1px solid orangered;
+}
 .artist_div, .venue_div{
     margin-top: 10px;
     padding-top: 5px;
-    border-top: 1px solid orangered;
     display: inline-block;
-    width: 100px;
-
+    width: 49%;
+    vertical-align: top;
 
 }
 
@@ -125,9 +128,23 @@ background: #FF4500;
     margin: 0 2px;
 
 }
+
+.artists_info p{
+    line-height: 1.6;
+}
 .image{
-    height: 120px;
-    max-width: 120px;
+    max-height: 120px;
+    max-width: 160px;
+}
+.map{
+    height: auto;
+    width: 380px;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: bottom;
 }
 .val{
     display: none;
@@ -137,10 +154,14 @@ background: #FF4500;
     display: inline;
     float: left;
     color: white;
-    margin-right: 250px;
     margin-top: 20px;
     margin-left: 30px;
 
+}
+#menu{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 .spontan{
     color: white;
